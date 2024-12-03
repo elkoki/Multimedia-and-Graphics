@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Haz clic en un botón"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:id="@+id/botonesLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/soundpool1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:tag="1"
+                    android:text="Tono SoundPool 1" />
+
+                <Button
+                    android:id="@+id/soundpool2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:tag="2"
+                    android:text="Tono SoundPool 2" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mediaplayer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Reproducir Canción con MediaPlayer" />
+
+            <Button
+                android:id="@+id/mediaplayer_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Grabar conversación"
+                tools:ignore="HardcodedText" />
+
+            <ScrollView
+                android:id="@+id/ScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <TextView
+                    android:id="@+id/Log"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    tools:ignore="HardcodedText" />
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
